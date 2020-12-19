@@ -1,18 +1,29 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = (isProd) => ({
-    prefix: '',
-    purge: {
-      enabled: isProd,
-      content: [
-        '**/*.html',
-        '**/*.ts',
-      ]
+  prefix: '',
+  purge: {
+    enabled: isProd,
+    content: [
+      '**/*.html',
+      '**/*.ts',
+    ]
+  },
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        gray: colors.trueGray,
+        indigo: colors.indigo,
+      }
     },
-    darkMode: false, // or 'media' or 'class'
-    theme: {
-      extend: {},
-    },
-    variants: {
-      extend: {},
-    },
-    plugins: [],
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
 });
