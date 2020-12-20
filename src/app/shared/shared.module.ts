@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { SharedRoutingModule } from './shared-routing.module';
 import { CustomButtonComponent } from './custom-button/custom-button.component';
 import { HeaderComponent } from './header/header.component';
+import { IconComponent } from './icon/icon.component';
 
 
 @NgModule({
   declarations: [
     CustomButtonComponent,
-    HeaderComponent
+    HeaderComponent,
+    IconComponent
   ],
   imports: [
     CommonModule,
