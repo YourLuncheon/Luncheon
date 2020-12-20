@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -12,18 +12,36 @@ export class HeaderComponent implements OnChanges {
   @Input() size: string;
   @Input() fontWeight: string;
   @Input() bgColor: string;
-  @Input() textAlign: string;
+  @Input() textAlign: string = "text-left";
 
-  private classObj: object = {};
+  private classObj: object;
 
   constructor() { }
 
-  ngOnChanges(): void {
-    this.color?this.classObj[this.color] = true: delete this.classObj[this.color];
-    this.size?this.classObj[this.size] = true: delete this.classObj[this.size];
-    this.fontWeight?this.classObj[this.fontWeight] = true: delete this.classObj[this.fontWeight];
-    this.bgColor?this.classObj[this.bgColor] = true: delete this.classObj[this.bgColor];
-    this.textAlign?this.classObj[this.textAlign] = true: delete this.classObj[this.textAlign];
+  ngOnChanges(changes: SimpleChanges): void {
+    this.classObj = {};
+    for (const propName in changes) {
+      if (changes.hasOwnProperty(propName)) {
+        const change:SimpleChange = changes[propName];
+        switch (propName) {
+          case 'color': {
+            this.classObj[this.color] = change.currentValue ? true : '';
+          }
+          case 'size': {
+            this.classObj["lg:"+this.size] = change.currentValue ? true : '';
+          }
+          case 'bgColor': {
+            this.classObj[this.bgColor] = change.currentValue ? true : '';
+          }
+          case 'fontWeight': {
+            this.classObj[this.fontWeight] = change.currentValue ? true : '';
+          }
+          case 'textAlign': {
+            this.classObj[this.textAlign] = change.currentValue ? true : '';
+          }
+        }
+      }
+    }
   }
 
   getClasses(): object{
