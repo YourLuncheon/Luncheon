@@ -24,21 +24,16 @@ export class HeaderComponent implements OnChanges {
       if (changes.hasOwnProperty(propName)) {
         const change:SimpleChange = changes[propName];
         switch (propName) {
-          case 'color': {
+          case 'color':
             this.classObj[this.color] = change.currentValue ? true : '';
-          }
-          case 'size': {
+          case 'size':
             this.classObj["lg:"+this.size] = change.currentValue ? true : '';
-          }
-          case 'bgColor': {
+          case 'bgColor':
             this.classObj[this.bgColor] = change.currentValue ? true : '';
-          }
-          case 'fontWeight': {
+          case 'fontWeight':
             this.classObj[this.fontWeight] = change.currentValue ? true : '';
-          }
-          case 'textAlign': {
+          case 'textAlign': 
             this.classObj[this.textAlign] = change.currentValue ? true : '';
-          }
         }
       }
     }
