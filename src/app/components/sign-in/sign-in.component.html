@@ -1,6 +1,15 @@
-<div class="m-3 p-4 flex flex-col justify-center items-center shadow-md bg-white rounded-md">
+<div class="m-3 p-4 flex flex-col space-y-3 justify-center items-center shadow-md bg-white rounded-md">
   Sign In
 
-  <app-custom-button size="BASE" btnLabel="Complete Meal" [isIconActive]="true" iconType="CHECK" iconSize="MD" >
+  <app-custom-button (onBtnClicked)="refreshClicked($event)" bgColor="DEFAULT" [isIconOnly]="true" iconType="REFRESH"
+    iconSize="MD">
+  </app-custom-button>
+
+  <app-custom-button (onBtnClicked)="loveClicked($event)" bgColor="RED600" [isIconOnly]="true" iconType="LOVE"
+    iconSize="MD">
+  </app-custom-button>
+
+  <app-custom-button (onBtnClicked)="completeMealClicked($event)" bgColor="INDIGO600" btnLabel="Complete Meal"
+    [isIconActive]="true" iconType="CHECK" iconSize="MD">
   </app-custom-button>
 </div>

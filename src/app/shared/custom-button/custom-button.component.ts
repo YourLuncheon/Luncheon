@@ -1,6 +1,7 @@
-import { Component, Input, OnInit, Output, SimpleChange, SimpleChanges } from '@angular/core';
-import { EventEmitter } from 'events';
+import { Component, Input, Output, SimpleChanges, EventEmitter } from '@angular/core';
 import { FontSize, FontSizeClasses } from "../../constants/font-size.constants";
+import { CustomButtonColorClasses, CustomButtonColors } from "./custom-button-color.model";
+import { IconSize } from "../../constants/icon-size.constants";
 import { addClassToObject } from "../../util/config.util";
 @Component({
   selector: 'app-custom-button',
@@ -11,14 +12,12 @@ export class CustomButtonComponent {
 
   /** INPUT FROM PARENT COMPONENT */
   @Input() btnLabel: string = 'Click Me..';
-  @Input() isLabelOnly: boolean = true;
   @Input() isIconOnly: boolean = false;
   @Input() isIconActive: boolean = false;
   @Input() iconType: string = 'default';
-  @Input() iconSize: string = 'MD';
-  @Input() textColor: string = 'text-white';
-  @Input() bgColor: string = 'bg-indigo-600';
+  @Input() iconSize: IconSize = IconSize.MD;
   @Input() size: FontSize = FontSize.BASE;
+  @Input() bgColor: CustomButtonColors = CustomButtonColors.DEFAULT;
 
   /** OUTPUT TO PARENT COMPONENT */
   @Output() onBtnClicked = new EventEmitter();
@@ -26,12 +25,13 @@ export class CustomButtonComponent {
   /** LOCAL STATE OBJECTS */
   styleState: object = {};
 
+  /**
+   * 
+   * @param changes 
+   */
   ngOnChanges(changes: SimpleChanges) {
-    this.styleState = {};
-    if (changes.textColor)
-      addClassToObject(this.styleState, [this.textColor]);
-    if (changes.bgColor)
-      addClassToObject(this.styleState, [this.bgColor]);
+    if (this.bgColor)
+      addClassToObject(this.styleState, [CustomButtonColorClasses[this.bgColor]]);
     if (changes.size)
       addClassToObject(this.styleState, [FontSizeClasses[this.size]]);
   }

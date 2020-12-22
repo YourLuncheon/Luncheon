@@ -12,4 +12,16 @@ export class SignInComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  refreshClicked(event: any): void {
+    console.log("Refresh clicked")
+  }
+
+  loveClicked(event: any): void {
+    console.log("Love clicked")
+  }
+
+  completeMealClicked(event: any): void {
+    console.log("completeMeal clicked")
+  }
+
 }
