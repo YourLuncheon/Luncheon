@@ -1,10 +1,4 @@
-import {
-  Component,
-  Input,
-  OnChanges,
-  SimpleChange,
-  SimpleChanges,
-} from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { addClassToObject } from 'src/app/util/config.util';
 
 @Component({
@@ -44,13 +38,13 @@ export class HeaderComponent implements OnChanges {
         addClassToObject(this.styles, ['lg:' + this.size]);
       }
       if (changes.bgColor) {
-        addClassToObject(this.styles, ['lg:' + this.bgColor]);
+        addClassToObject(this.styles, [this.bgColor]);
       }
       if (changes.fontWeight) {
-        addClassToObject(this.styles, ['lg:' + this.bgColor]);
+        addClassToObject(this.styles, [this.fontWeight]);
       }
       if (changes.textAlign) {
-        addClassToObject(this.styles, ['lg:' + this.bgColor]);
+        addClassToObject(this.styles, [this.textAlign]);
       }
     }
   }
