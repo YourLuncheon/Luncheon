@@ -9,7 +9,7 @@ export enum CustomButtonColorClasses {
     RED600 = " bg-red-600 text-white transition duration-500 ease-in-out hover\:bg-red-500 focus\:ring-red-500 ",
     RED700 = " bg-red-700 text-white transition duration-500 ease-in-out hover\:bg-red-600 focus\:ring-red-600 ",
 
-    DEFAULT = " bg-white text-gray-800 transition duration-500 ease-in-out hover\:bg-gray-600 hover\:text-white focus\:ring-gray-600 "
+    DEFAULT = " bg-green text-gray-800 transition duration-500 ease-in-out hover\:bg-gray-600 hover\:text-white focus\:ring-gray-600 "
 }
 
 export enum CustomButtonColors {

@@ -5,13 +5,15 @@ import { SharedRoutingModule } from './shared-routing.module';
 import { CustomButtonComponent } from './custom-button/custom-button.component';
 import { HeaderComponent } from './header/header.component';
 import { IconComponent } from './icon/icon.component';
+import { DescriptionComponent } from './description/description.component';
 
 
 @NgModule({
   declarations: [
     CustomButtonComponent,
     HeaderComponent,
-    IconComponent
+    IconComponent,
+    DescriptionComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import { IconComponent } from './icon/icon.component';
   ], 
   exports: [
     CustomButtonComponent,
-    HeaderComponent
+    HeaderComponent,
+    DescriptionComponent
   ]
 })
 export class SharedModule { }
