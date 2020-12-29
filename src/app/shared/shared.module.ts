@@ -6,6 +6,7 @@ import { CustomButtonComponent } from './custom-button/custom-button.component';
 import { HeaderComponent } from './header/header.component';
 import { IconComponent } from './icon/icon.component';
 import { DescriptionComponent } from './description/description.component';
+import { ChipsComponent } from './chips/chips.component';
 
 
 @NgModule({
@@ -13,16 +14,19 @@ import { DescriptionComponent } from './description/description.component';
     CustomButtonComponent,
     HeaderComponent,
     IconComponent,
-    DescriptionComponent
+    DescriptionComponent,
+    ChipsComponent
   ],
   imports: [
     CommonModule,
     SharedRoutingModule
-  ], 
+  ],
   exports: [
     CustomButtonComponent,
     HeaderComponent,
-    DescriptionComponent
+    DescriptionComponent,
+    ChipsComponent
+
   ]
 })
 export class SharedModule { }
