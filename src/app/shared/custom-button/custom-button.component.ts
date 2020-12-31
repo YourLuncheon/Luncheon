@@ -26,8 +26,8 @@ export class CustomButtonComponent {
   styleState: object = {};
 
   /**
-   * 
-   * @param changes 
+   *
+   * @param changes
    */
   ngOnChanges(changes: SimpleChanges) {
     if (this.bgColor)
@@ -37,8 +37,8 @@ export class CustomButtonComponent {
   }
 
   /**
-   * 
-   * @param event 
+   *
+   * @param event
    */
   btnClicked(event: any): void {
     this.onBtnClicked.emit(event);

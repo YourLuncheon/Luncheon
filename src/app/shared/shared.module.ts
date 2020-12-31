@@ -9,6 +9,7 @@ import { DescriptionComponent } from './description/description.component';
 import { FormInputComponent } from './form-input/form-input.component';
 import { FormValidationErrorsComponent } from './form-validation-errors/form-validation-errors.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ChipsComponent } from './chips/chips.component';
 
 
 @NgModule({
@@ -19,19 +20,22 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     DescriptionComponent,
     FormInputComponent,
     FormValidationErrorsComponent,
+    ChipsComponent
   ],
   imports: [
     ReactiveFormsModule,
     FormsModule,
     CommonModule,
     SharedRoutingModule
-  ], 
+  ],
   exports: [
     CustomButtonComponent,
     HeaderComponent,
     DescriptionComponent,
     FormInputComponent,
-    FormValidationErrorsComponent
+    FormValidationErrorsComponent,
+    ChipsComponent
+
   ]
 })
 export class SharedModule { }
