@@ -13,8 +13,7 @@ module.exports = (isProd) => ({
   theme: {
     extend: {
       colors: {
-        gray: colors.trueGray,
-        indigo: colors.indigo,
+        gray: colors.blueGray
       }
     },
   },

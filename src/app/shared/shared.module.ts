@@ -6,6 +6,9 @@ import { CustomButtonComponent } from './custom-button/custom-button.component';
 import { HeaderComponent } from './header/header.component';
 import { IconComponent } from './icon/icon.component';
 import { DescriptionComponent } from './description/description.component';
+import { FormInputComponent } from './form-input/form-input.component';
+import { FormValidationErrorsComponent } from './form-validation-errors/form-validation-errors.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,16 +16,22 @@ import { DescriptionComponent } from './description/description.component';
     CustomButtonComponent,
     HeaderComponent,
     IconComponent,
-    DescriptionComponent
+    DescriptionComponent,
+    FormInputComponent,
+    FormValidationErrorsComponent,
   ],
   imports: [
+    ReactiveFormsModule,
+    FormsModule,
     CommonModule,
     SharedRoutingModule
   ], 
   exports: [
     CustomButtonComponent,
     HeaderComponent,
-    DescriptionComponent
+    DescriptionComponent,
+    FormInputComponent,
+    FormValidationErrorsComponent
   ]
 })
 export class SharedModule { }

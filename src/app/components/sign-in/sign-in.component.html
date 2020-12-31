@@ -1,15 +1,18 @@
-<div class="m-3 p-4 flex flex-col space-y-3 justify-center items-center shadow-md bg-white rounded-md">
+<div class="w-100 m-3 p-4 flex flex-col space-y-3 justify-center items-start shadow-md bg-white rounded-md">
   Sign In
 
-  <app-custom-button (onBtnClicked)="refreshClicked($event)" [isIconOnly]="true" iconType="REFRESH"
+  <app-custom-button class="w-100" (onBtnClicked)="refreshClicked($event)" [isIconOnly]="true" iconType="REFRESH" iconSize="MD">
+  </app-custom-button>
+
+  <app-custom-button class="w-100" (onBtnClicked)="loveClicked($event)" bgColor="RED600" [isIconOnly]="true" iconType="LOVE"
     iconSize="MD">
   </app-custom-button>
 
-  <app-custom-button (onBtnClicked)="loveClicked($event)" bgColor="RED600" [isIconOnly]="true" iconType="LOVE"
-    iconSize="MD">
-  </app-custom-button>
-
-  <app-custom-button (onBtnClicked)="completeMealClicked($event)" bgColor="INDIGO600" btnLabel="Complete Meal"
+  <app-custom-button class="w-100" (onBtnClicked)="completeMealClicked($event)" bgColor="INDIGO600" btnLabel="Complete Meal"
     [isIconActive]="true" iconType="CHECK" iconSize="MD">
   </app-custom-button>
+
+
+  <app-form-input class=" min-w-full w-100"  fieldId="emailSignIn" labelType="email" [isLabelActive]="true" [control]="emailControl">
+  </app-form-input>
 </div>
