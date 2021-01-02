@@ -10,9 +10,9 @@ import { BaseFormComponent } from "../base-form/base-form.component";
 export class FormInputComponent extends  BaseFormComponent{
 
   /** INPUT FROM PARENT COMPONENT */
-  @Input() inputType: FormInputType = FormInputType.TEXT;
   @Input() isBorder: boolean = true;
   @Input() isLabelActive: boolean = true;
+  @Input() inputType: FormInputType = FormInputType.TEXT;
   @Input() placeholderText: string = 'Enter text here..';
 
   /** OUTPUT TO PARENT COMPONENT */
@@ -24,16 +24,4 @@ export class FormInputComponent extends  BaseFormComponent{
   inputChange(event: any) {
     this.forInputChange.emit(event);
   }
-
-  /**
-   * [What] Set No border or other custom classes to the Input
-   */
-  getUIClasses() {
-    if (!this.isBorder) {
-      return {
-        no__border: true,
-      };
-    }
-  }
-
 }

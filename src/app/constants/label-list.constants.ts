@@ -1,3 +1,4 @@
 export const LABEL_LIST = {
-    email: 'Email'
+    email: 'Email',
+    rememberMe: 'Remember Me'
 }

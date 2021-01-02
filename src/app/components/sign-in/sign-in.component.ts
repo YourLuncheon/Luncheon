@@ -9,6 +9,7 @@ import { FormControl } from '@angular/forms';
 export class SignInComponent implements OnInit {
 
   emailControl: FormControl = new FormControl('', []);
+  checkboxControl: FormControl = new FormControl('', []);
   constructor() { }
 
   ngOnInit(): void {
@@ -24,6 +25,14 @@ export class SignInComponent implements OnInit {
 
   completeMealClicked(event: any): void {
     console.log("completeMeal clicked")
+  }
+
+  onCheckboxChanged(event){
+    console.log("Checkbox called");
+  }
+
+  onEmailChanged(event){
+    console.log("Email called");
   }
 
 }

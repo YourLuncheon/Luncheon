@@ -10,6 +10,7 @@ import { FormInputComponent } from './form-input/form-input.component';
 import { FormValidationErrorsComponent } from './form-validation-errors/form-validation-errors.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ChipsComponent } from './chips/chips.component';
+import { FormCheckboxComponent } from './form-checkbox/form-checkbox.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ChipsComponent } from './chips/chips.component';
     DescriptionComponent,
     FormInputComponent,
     FormValidationErrorsComponent,
-    ChipsComponent
+    ChipsComponent,
+    FormCheckboxComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -34,8 +36,8 @@ import { ChipsComponent } from './chips/chips.component';
     DescriptionComponent,
     FormInputComponent,
     FormValidationErrorsComponent,
-    ChipsComponent
-
+    ChipsComponent,
+    FormCheckboxComponent
   ]
 })
 export class SharedModule { }

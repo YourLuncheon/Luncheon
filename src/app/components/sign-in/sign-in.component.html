@@ -13,6 +13,8 @@
   </app-custom-button>
 
 
-  <app-form-input class=" min-w-full w-100"  fieldId="emailSignIn" labelType="email" [isLabelActive]="true" [control]="emailControl">
+  <app-form-input  fieldId="emailSignIn" (forInputChange)="onEmailChanged($event)" labelType="email" [control]="emailControl">
   </app-form-input>
+
+  <app-form-checkbox labelType="rememberMe" (forCheckboxChange)="onCheckboxChanged($event)" [control]="checkboxControl"></app-form-checkbox>
 </div>
