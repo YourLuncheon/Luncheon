@@ -1,5 +1,4 @@
-<div class="w-100 m-3 p-4 flex flex-col space-y-3 justify-center items-start shadow-md bg-white rounded-md">
-  Sign In
+<div class="w-100 m-3 p-4 flex flex-col space-y-3 justify-center items-start shadow-md bg-white dark:bg-gray-900 rounded-md">
 
   <app-custom-button class="w-100" (onBtnClicked)="refreshClicked($event)" [isIconOnly]="true" iconType="REFRESH" iconSize="MD">
   </app-custom-button>
@@ -8,7 +7,7 @@
     iconSize="MD">
   </app-custom-button>
 
-  <app-custom-button class="w-100" (onBtnClicked)="completeMealClicked($event)" bgColor="INDIGO600" btnLabel="Complete Meal"
+  <app-custom-button class="w-100" (onBtnClicked)="completeMealClicked($event)" bgColor="RED600" btnLabel="Complete Meal"
     [isIconActive]="true" iconType="CHECK" iconSize="MD">
   </app-custom-button>
 
@@ -16,5 +15,5 @@
   <app-form-input  fieldId="emailSignIn" (forInputChange)="onEmailChanged($event)" labelType="email" [control]="emailControl">
   </app-form-input>
 
-  <app-form-checkbox labelType="rememberMe" (forCheckboxChange)="onCheckboxChanged($event)" [control]="checkboxControl"></app-form-checkbox>
+  <app-form-checkbox checkBoxColor="RED600" labelType="rememberMe" (forCheckboxChange)="onCheckboxChanged($event)" [control]="checkboxControl"></app-form-checkbox>
 </div>

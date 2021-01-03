@@ -23,6 +23,7 @@ export abstract class BaseFormComponent implements OnInit, DoCheck {
      * @param changes 
      */
     ngOnChanges(changes: SimpleChanges) {
+        console.log("old called");
         if (changes.labelType) {
             this.label = LABEL_LIST[this.labelType] ? LABEL_LIST[this.labelType] : '';
         }

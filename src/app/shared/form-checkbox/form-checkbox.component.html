@@ -1,11 +1,11 @@
 <div class="min-w-full w-100 space-x-2 flex items-center justify-between">
 
   <input type="checkbox"
-    class="h-4 w-4 rounded border-gray-300 focus:border-indigo-300 focus:ring-2 focus:ring-indigo-200 focus:ring-opacity-50 text-indigo-600"
-    (change)="checkboxChange($event)" [formControl]="control" [id]="fieldId" />
+    class="h-4 w-4 rounded border-gray-300 focus:ring-2 focus:ring-opacity-50 "
+    (change)="checkboxChange($event)" [formControl]="control" [id]="fieldId" [ngClass]="styleState" />
 
   <label *ngIf="isLabelActive" [for]="fieldId"
-    class="min-w-full flex py-2 w-100 text-gray-600 text-sm md:text-base lg:text-lg">
+    class="min-w-full flex py-2 w-100 text-gray-600 dark:text-gray-200 text-sm md:text-base lg:text-lg">
     {{ label }}
   </label>
 

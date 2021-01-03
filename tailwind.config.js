@@ -9,11 +9,11 @@ module.exports = (isProd) => ({
       '**/*.ts',
     ]
   },
-  darkMode: "class",
+  darkMode: "media",
   theme: {
     extend: {
       colors: {
-        gray: colors.blueGray
+        gray: colors.coolGray
       }
     },
   },
